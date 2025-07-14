@@ -1,0 +1,41 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movie Recommendation System</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='movielogo.png') }}" type="image/png">
+
+  </head>
+  <body class="bg-green-200">
+    <header class="text-gray-600 body-font -my-1">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="/">
+            <img src="{{ url_for('static', filename='movielogo.png') }}" alt="Logo" class="w-10 h-10 rounded-full">
+
+            <a href="/">
+              <span class="ml-3 text-xl">Watchify</span>
+            </a>
+          </a>
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <a href="/" class="mr-5 hover:text-gray-900">Home</a>
+            <a href="/about" class="mr-5 hover:text-gray-900">About</a>
+            <a href="/contact" class="mr-5 hover:text-gray-900">Contact Us</a>
+            <a href="/genres" class="mr-5 hover:text-gray-900">Genres</a>
+            <a href="/recommendation" class="mr-5 hover:text-gray-900">recommendation</a>
+          </nav>
+          <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Log in
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+            
+
+          </button>
+        </div>
+      </header>
+
+      {% block body %}{% endblock %}

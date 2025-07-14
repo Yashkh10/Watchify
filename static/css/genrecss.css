@@ -1,0 +1,188 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f1f1f;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Genre Filter */
+.genre-label {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Beautiful Genre Checkboxes */
+.genre-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.genre-checkboxes input[type="checkbox"] {
+    display: none;
+}
+
+.genre-checkboxes label {
+    display: flex;
+    align-items: center;
+    background: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease-in-out;
+}
+
+.genre-checkboxes input[type="checkbox"]:checked + label {
+    background: #ff5733;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+/* Movies Grid (5 Columns) */
+.genre-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    padding: 10px;
+}
+
+/* Movie Container */
+.movie-container {
+    background: #222;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+}
+
+.movie-container:hover {
+    transform: scale(1.05);
+}
+
+/* Checkbox */
+.movie-container input[type="checkbox"] {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Movie Poster */
+.movie-poster {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .genre-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .genre-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .genre-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Center the buttons in a row */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pagination form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Style for the buttons inside the container */
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #ff5733;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #e84e2d;
+}
+
+/* Optional: Make sure the 'Previous' and 'Next' buttons have the same look */
+.pagination button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #ff5733;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button[type="submit"]:hover {
+    background-color: #e84e2d;
+}
+
+/* Logo Styles */
+.logo-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+}
+
+.logo {
+    width: 70px;
+    height: auto;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
+
