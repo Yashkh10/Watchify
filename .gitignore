@@ -20,3 +20,8 @@ pickle_folder/*.pkl
 
 instance/
 *.sqlite3
+
+*.pkl
+*.zip
+*.h5
+*.pt
