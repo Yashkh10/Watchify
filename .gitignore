@@ -25,3 +25,5 @@ instance/
 *.zip
 *.h5
 *.pt
+
+/model/
