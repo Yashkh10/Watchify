@@ -21,22 +21,30 @@
 
 ---
 
-## 🧰 Project Structure
+## 📁 Project Structure
 
 ```
-
-- `app.py`: Main application script.
-- `model/`: Contains saved model files and similarity matrices (`.pkl` files).
-- `templates/`: HTML templates used for rendering pages, including:
-  - `about.html`
-  - `base.html`
-  - `contact.html`
-  - `genres_page.html`
-  - `header.html`
-  - `index.html`
-- `static/`: Static assets like CSS, JavaScript, and images.
-
-````
+Watchify/
+│
+├── app.py                  # Main Flask application
+├── requirements.txt        # Python dependencies
+│
+├── model/                  # Saved models and similarity matrices
+│   └── similarity.pkl      # Precomputed similarity matrix (generated manually)
+│
+├── templates/              # HTML templates for the web pages
+│   ├── about.html
+│   ├── base.html
+│   ├── contact.html
+│   ├── genres_page.html
+│   ├── header.html
+│   └── index.html
+│
+└── static/                 # Static files (CSS, JS, Images)
+    ├── css/
+    ├── js/
+    └── images/
+```
 
 ---
 
@@ -47,7 +55,7 @@
 ```bash
 git clone https://github.com/Yashkh10/Watchify.git
 cd Watchify
-````
+```
 
 ### 🐍 Create Virtual Environment
 
@@ -65,13 +73,49 @@ source moviesenv/bin/activate
 pip install -r requirements.txt
 ```
 
-### ▶️ Run the Application
+---
+
+## 📦 Generating `similarity.pkl` (Required Before Running the App)
+
+Before launching the Watchify app, make sure the required similarity matrix is generated and saved.
+
+### 🔧 Steps:
+
+1. Open the notebook:
+
+```
+template/Movie Recommendation System.ipynb
+```
+
+2. Run all cells from top to bottom.
+
+3. At the end, a file named `similarity.pkl` will be saved in the `model/` directory.
+
+> ✅ If the notebook does not automatically save the file, you can manually add and run this cell at the end:
+
+```python
+import os, pickle
+os.makedirs("model", exist_ok=True)
+
+with open("model/similarity.pkl", "wb") as f:
+    pickle.dump(similarity, f)
+```
+
+Make sure `similarity` is the cosine similarity matrix variable created in the notebook.
+
+---
+
+## ▶️ Run the Application
 
 ```bash
 python app.py
 ```
 
-Then, open your browser and navigate to `http://127.0.0.1:5000/` to start discovering movies!
+Then open your browser and navigate to:
+
+```
+http://127.0.0.1:5000/
+```
 
 ---
 
@@ -108,5 +152,3 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 Enjoy movie time with **Watchify**! 🍿
-
-```
