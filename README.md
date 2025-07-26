@@ -25,23 +25,16 @@
 
 ```
 
-Watchify/
-│
-├── app.py                # Main Flask application
-├── requirements.txt      # Python dependencies
-│
-├── model/
-│   ├── similarity.pkl    # Precomputed similarity matrix
-│   └── movies.csv        # Movie metadata
-│
-├── templates/
-│   ├── index.html
-│   ├── genre.html
-│   └── recommend.html
-│
-└── static/
-├── css/
-└── js/
+- `app.py`: Main application script.
+- `model/`: Contains saved model files and similarity matrices (`.pkl` files).
+- `templates/`: HTML templates used for rendering pages, including:
+  - `about.html`
+  - `base.html`
+  - `contact.html`
+  - `genres_page.html`
+  - `header.html`
+  - `index.html`
+- `static/`: Static assets like CSS, JavaScript, and images.
 
 ````
 
